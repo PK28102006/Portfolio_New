@@ -1,182 +1,549 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Poovendrakumar T | Portfolio</title>
 
-    <link rel="stylesheet" href="style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Poovendrakumar T | Premium Portfolio</title>
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="stylesheet" href="style.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
+  <!-- FontAwesome for Premium Vector Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-  <body>
-    <canvas id="particles-canvas"></canvas>
-    <!-- NAVBAR -->
-    <header class="navbar">
-      <div class="container nav-content">
+<body>
+  <!-- LAYERED ABSTRACT STRUCTURAL BACKGROUND -->
+  <div class="bg-stripes">
+    <div class="bg-stripe stripe-1"></div>
+    <div class="bg-stripe stripe-2"></div>
+    <div class="bg-stripe stripe-3"></div>
+  </div>
 
-        <nav class="desktop-menu">
+  <!-- MAIN PORTFOLIO CARD CONTAINER -->
+  <div class="portfolio-frame">
+
+    <!-- FROSTED GLASS NAVIGATION BAR -->
+    <header class="navbar" id="navbar">
+    <div class="container nav-content">
+      <a href="#home" class="logo" style="color: var(--primary-color);">POOVENDRA</a>
+      
+      <nav class="desktop-menu">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions" style="display: flex; align-items: center; gap: 1rem;">
+        <a href="#contact" class="btn primary nav-hire-btn">Hire Me</a>
+        <button class="menu-btn" id="menu-btn" aria-label="Open menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE SLIDE-OUT MENU DRAWER -->
+  <div class="mobile-drawer-overlay" id="mobile-drawer-overlay"></div>
+  <div class="mobile-drawer" id="mobile-drawer">
+    <div class="drawer-header">
+      <div class="logo" style="color: var(--primary-color);">POOVENDRA</div>
+      <button class="drawer-close" id="drawer-close" aria-label="Close menu">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <nav class="mobile-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">Hi I am</p>
+        <h2 class="hero-name">Poovendrakumar T</h2>
+        <h1 class="hero-heading">Front-end Developer</h1>
+        
+        <div class="hero-socials">
+          <a href="https://github.com/PK28102006" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="http://www.linkedin.com/in/poovendrakumar-t-cse-499631366" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+
+        <div class="hero-buttons">
+          <a href="#contact" class="btn primary">Hire Me</a>
+          <a href="my_resume_final_pk's_2.pdf" download="Poovendrakumar_Resume.pdf" class="btn outline"><i class="fas fa-download"></i> Download CV</a>
+        </div>
+
+        <!-- Figma Stats Box -->
+        <div class="hero-stats-card">
+          <div class="hero-stat-item">
+            <h3>1290+</h3>
+            <p>SkillRack Solved</p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="hero-stat-item">
+            <h3>130+</h3>
+            <p>LeetCode Solved</p>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="hero-stat-item">
+            <h3>2028</h3>
+            <p>Graduating Year</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROFILE PHOTO -->
+      <div class="hero-avatar">
+        <div class="avatar-circle-backdrop"></div>
+        <div class="avatar-circle">
+          <img src="My_Photo_1.jpeg" alt="Poovendrakumar T" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT ME SECTION -->
+  <section id="about" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="section-line"></div>
+
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="about-highlight">
+            CSE Student & passionate Front-end Developer, building seamless and responsive web experiences.
+          </div>
+          <p>
+            I specialize in creating intuitive, high-performance interfaces using modern web technologies, while
+            maintaining a strong foundational background in C and Python programming.
+          </p>
+          <p>
+            My goal is to deliver clean, scalable, and accessible code architectures that bridge the gap between user
+            needs and business objectives. I thrive in problem-solving environments and continuous learning.
+          </p>
+        </div>
+
+        <div class="about-info-grid">
+          <div class="glass-card info-stat-card">
+            <h3>1290+</h3>
+            <p>Problems Solved</p>
+          </div>
+          <div class="glass-card info-stat-card">
+            <h3>CSE</h3>
+            <p>Specialization</p>
+          </div>
+          <div class="glass-card info-stat-card">
+            <h3>GUVI</h3>
+            <p>HTML & CSS Certified</p>
+          </div>
+          <div class="glass-card info-stat-card">
+            <h3>2028</h3>
+            <p>Graduation Year</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- EDUCATION (WOW FACTOR) -->
+      <div class="education-section">
+        <h3 class="dashboard-title">Education</h3>
+
+        <!-- College Card (Sri Eshwar) -->
+        <a href="https://sece.ac.in/" target="_blank" class="glass-card education-card education-link-card">
+          <div class="education-card-content">
+            <div class="school-icon-glow"><i class="fas fa-university"></i></div>
+            <div class="school-info-details">
+              <div class="school-header-wrap">
+                <h4>Sri Eshwar College of Engineering</h4>
+              </div>
+              <p class="school-sub">B.E. Computer Science and Engineering (CSE) &bull; Coimbatore</p>
+
+              <div class="grades-grid">
+                <div class="grade-pill">
+                  <span class="grade-label">Degree</span>
+                  <span class="grade-value">B.E. CSE</span>
+                </div>
+                <div class="grade-pill">
+                  <span class="grade-label">Duration</span>
+                  <span class="grade-value">2024 - 2028</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+
+        <!-- Schooling Card (Velammal) -->
+        <a href="https://www.justdial.com/Theni/Velammal-Vidyalaya-Muthudevanpatti-Kodangipatti-Kodangipatti/9999P4546-4546-110219124613-B7P3_BZDET" target="_blank" class="glass-card education-card education-link-card">
+          <div class="education-card-content">
+            <div class="school-icon-glow"><i class="fas fa-graduation-cap"></i></div>
+            <div class="school-info-details">
+              <div class="school-header-wrap">
+                <h4>Velammal Vidyalaya</h4>
+              </div>
+              <p class="school-sub">Muthudevanpatti, Theni</p>
+
+              <div class="grades-grid">
+                <div class="grade-pill">
+                  <span class="grade-label">HSC</span>
+                  <span class="grade-value">66%</span>
+                </div>
+                <div class="grade-pill">
+                  <span class="grade-label">SSLC</span>
+                  <span class="grade-value">70%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE SECTION -->
+  <section id="experience" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">Experience</h2>
+      <div class="section-line"></div>
+
+      <!-- Experience Glass Card -->
+      <div class="glass-card experience-card">
+        <div class="experience-header">
+          <div class="experience-title-wrap">
+            <div class="experience-icon"><i class="fas fa-briefcase"></i></div>
+            <div>
+              <h3>Full Stack MERN Internship</h3>
+              <p class="company-sub">Development & Deployment</p>
+            </div>
+          </div>
+          <span class="duration-badge">2025</span>
+        </div>
+
+        <!-- Tech Badges -->
+        <div class="tech-badges-grid">
+          <span class="tag-small">React</span>
+          <span class="tag-small">Node.js</span>
+          <span class="tag-small">Express</span>
+          <span class="tag-small">MongoDB</span>
+          <span class="tag-small">JWT</span>
+        </div>
+
+        <div class="experience-body">
+          <p class="body-intro">
+            Developed and deployed a production-ready MERN stack application with:
+          </p>
+          <ul class="bullet-list">
+            <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> React frontend with modern UI/UX</li>
+            <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> Node.js & Express backend architecture</li>
+            <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> MongoDB database integration</li>
+            <li><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> JWT authentication system</li>
+          </ul>
+
+          <h4>
+            Key Responsibilities:
+          </h4>
+          <ul class="bullet-list">
+            <li><i class="fas fa-circle-notch" style="color: var(--secondary-color);"></i> REST API development and integration</li>
+            <li><i class="fas fa-circle-notch" style="color: var(--secondary-color);"></i> Backend service implementation</li>
+            <li><i class="fas fa-circle-notch" style="color: var(--secondary-color);"></i> Secure authentication system</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS & DASHBOARD SECTION -->
+  <section id="skills" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">Skills & Stats</h2>
+      <div class="section-line"></div>
+
+      <div class="skills-layout">
+        <!-- Skill Cards List -->
+        <div class="skills-wrapper">
+          <div class="glass-card skills-card-compact">
+            <div class="skill-icon-box"><i class="fas fa-code"></i></div>
+            <div class="skill-info">
+              <h3>Programming</h3>
+              <p>C, Python, Java, C++</p>
+            </div>
+          </div>
+
+          <div class="glass-card skills-card-compact">
+            <div class="skill-icon-box"><i class="fas fa-laptop-code"></i></div>
+            <div class="skill-info">
+              <h3>Web Technologies</h3>
+              <p>HTML5, CSS3, JavaScript, React, Spring Boot</p>
+            </div>
+          </div>
+
+          <div class="glass-card skills-card-compact">
+            <div class="skill-icon-box"><i class="fas fa-tools"></i></div>
+            <div class="skill-info">
+              <h3>Tools & Design</h3>
+              <p>VS Code, Canva, Git & GitHub</p>
+            </div>
+          </div>
+
+          <div class="glass-card skills-card-compact">
+            <div class="skill-icon-box"><i class="fas fa-terminal"></i></div>
+            <div class="skill-info">
+              <h3>Coding Profiles</h3>
+              <p>SkillRack – 1230 Problems | LeetCode – 59 Problems</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications Card -->
+        <div class="glass-card coding-dashboard">
+          <h3 class="dashboard-title">Certifications</h3>
+          <p style="color: var(--text-light); font-size: 0.95rem; margin-bottom: 1.5rem;">
+            Industry-recognized credentials and certifications validating technical proficiency and development skills.
+          </p>
+
+          <div class="certs-mini-list" style="margin-top: 0;">
+            <div class="certs-grid">
+              <div class="cert-item">
+                <i class="fas fa-certificate"></i>
+                <span>HTML & CSS (GUVI)</span>
+              </div>
+              <div class="cert-item">
+                <i class="fas fa-certificate"></i>
+                <span>C & Java (SoloLearn)</span>
+              </div>
+              <div class="cert-item">
+                <i class="fas fa-certificate"></i>
+                <span>C, C++ (IIT Bombay)</span>
+              </div>
+              <div class="cert-item">
+                <i class="fas fa-certificate"></i>
+                <span>SQL (HackerRank)</span>
+              </div>
+              <div class="cert-item">
+                <i class="fas fa-certificate"></i>
+                <span>Design Thinking (NPTEL)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS SECTION WITH DYNAMIC FILTERING -->
+  <section id="projects" class="section reveal">
+    <div class="container">
+      <div class="projects-header">
+        <div class="projects-title-block">
+          <h2 class="section-title">Projects</h2>
+          <div class="section-line"></div>
+        </div>
+        <div class="filter-tabs">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="c-java">C & Java</button>
+          <button class="filter-btn" data-filter="python-ml">Python & ML</button>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="glass-card project-card" data-category="c-java">
+          <div class="project-icon"><i class="fas fa-car-side"></i></div>
+          <h3>Driver Management</h3>
+          <p>Robust C-based driver records system using efficient file handling APIs for persistence and structural
+            querying.</p>
+          <div class="project-meta">
+            <span class="tag-small">C & File Systems</span>
+            <a href="https://github.com/PK28102006" target="_blank" class="project-link-icon"
+              aria-label="View Project Source">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="glass-card project-card" data-category="python-ml">
+          <div class="project-icon"><i class="fas fa-calculator"></i></div>
+          <h3>Currency Converter</h3>
+          <p>Real-time Python application integrating live exchange rate APIs to perform instant global currency
+            conversions.</p>
+          <div class="project-meta">
+            <span class="tag-small">Python & Web</span>
+            <a href="https://github.com/PK28102006" target="_blank" class="project-link-icon"
+              aria-label="View Project Source">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="glass-card project-card" data-category="python-ml">
+          <div class="project-icon"><i class="fas fa-bolt"></i></div>
+          <h3>Power Prediction</h3>
+          <p>Machine learning model leveraging Principal Component Analysis (PCA) and multiple predictive algorithms for
+            electric output prediction.</p>
+          <div class="project-meta">
+            <span class="tag-small">Python & ML</span>
+            <a href="https://github.com/PK28102006" target="_blank" class="project-link-icon"
+              aria-label="View Project Source">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="glass-card project-card" data-category="c-java">
+          <div class="project-icon"><i class="fas fa-utensils"></i></div>
+          <h3>Food Ordering System</h3>
+          <p>Backend framework utilizing Java and Spring Boot for managing dynamic menu states, food orders, and
+            dispatching deliveries.</p>
+          <div class="project-meta">
+            <span class="tag-small">Java & Spring Boot</span>
+            <a href="https://github.com/PK28102006" target="_blank" class="project-link-icon"
+              aria-label="View Project Source">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION WITH GLASSFORMIC FORM -->
+  <section id="contact" class="section reveal">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="section-line"></div>
+
+      <div class="contact-layout">
+        <div class="contact-info-block">
+          <h3>Get In Touch</h3>
+          <p class="intro">
+            Whether you have an interesting project idea, a job opportunity, or just want to connect, feel free to drop
+            a message!
+          </p>
+
+          <div class="contact-cards-list">
+            <div class="contact-item-card">
+              <i class="fas fa-envelope"></i>
+              <div class="contact-item-details">
+                <h4>Email</h4>
+                <a href="mailto:poovendrakumart2006@gmail.com">poovendrakumart2006@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item-card">
+              <i class="fas fa-phone"></i>
+              <div class="contact-item-details">
+                <h4>Phone</h4>
+                <span>+91 8667473682</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://github.com/PK28102006" target="_blank" class="social-icon" aria-label="GitHub Profile">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="http://www.linkedin.com/in/poovendrakumar-t-cse-499631366" target="_blank" class="social-icon"
+              aria-label="LinkedIn Profile">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Glass Contact Form -->
+        <div class="glass-card">
+          <form id="contact-form" class="contact-form" action="#" method="POST">
+            <div class="form-group">
+              <input type="text" id="name" name="name" class="glass-input" placeholder=" " required />
+              <label for="name" class="form-label">Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" class="glass-input" placeholder=" " required />
+              <label for="email" class="form-label">Email Address</label>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" class="glass-input" placeholder=" " required />
+              <label for="subject" class="form-label">Subject</label>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" class="glass-input" placeholder=" " required></textarea>
+              <label for="message" class="form-label">Message</label>
+            </div>
+            <button type="submit" class="btn primary form-submit-btn">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+            <div class="form-status" id="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-divider"></div>
+      <div class="footer-content">
+        <div class="footer-logo">Poovendra.</div>
+
+        <div class="footer-nav">
           <a href="#home">Home</a>
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
           <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
-        </nav>
-
-        <div class="menu-btn"><i class="fa fa-bars"></i></div>
-      </div>
-    </header>
-
-    <!-- HERO -->
-    <section id="home" class="hero">
-      <div class="container hero-content">
-        <div class="hero-text">
-          <h1>Hi, I'm <span>Poovendrakumar T</span></h1>
-          <p class="hero-subtitle">
-            I'm a <span class="typing-text"></span>
-          </p>
-
-          <div class="hero-buttons">
-            <a href="#projects" class="btn primary">View Projects</a>
-            <a href="#contact" class="btn outline">Contact</a>
-          </div>
         </div>
 
-        <!-- PROFILE PHOTO -->
-        <div class="avatar-circle">
-          <img src="myphoto.jpg" alt="Profile Photo" />
+        <div class="footer-socials">
+          <a href="https://github.com/PK28102006" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="http://www.linkedin.com/in/poovendrakumar-t-cse-499631366" target="_blank" aria-label="LinkedIn"><i
+              class="fab fa-linkedin"></i></a>
         </div>
+
+        <p class="footer-copyright">&copy; 2026 Poovendrakumar T. All rights reserved.</p>
       </div>
-    </section>
+    </div>
+  </footer>
+  </div> <!-- /.portfolio-frame -->
 
-    <!-- ABOUT -->
-    <section id="about" class="section reveal">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="section-line"></div>
+  <!-- Chatbase Embed Script (from original portfolio) -->
+  <script>
+    (function () {
+      if (!window.chatbase || window.chatbase("getState") !== "initialized") {
+        window.chatbase = (...arguments) => {
+          if (!window.chatbase.q) { window.chatbase.q = [] }
+          window.chatbase.q.push(arguments)
+        };
+        window.chatbase = new Proxy(window.chatbase, {
+          get(target, prop) {
+            if (prop === "q") { return target.q }
+            return (...args) => target(prop, ...args)
+          }
+        })
+      }
+      const onLoad = function () {
+        const script = document.createElement("script");
+        script.src = "https://www.chatbase.co/embed.min.js";
+        script.id = "1OXzY9n2C-29KjWnkq1Xe";
+        script.domain = "www.chatbase.co";
+        document.body.appendChild(script)
+      };
+      if (document.readyState === "complete") { onLoad() }
+      else { window.addEventListener("load", onLoad) }
+    })();
+  </script>
+  <script src="script.js"></script>
+</body>
 
-        <div class="about-content">
-          <p>
-            I'm a CSE student and Front-end Developer, passionate about building seamless, responsive, and user-focused web applications. I specialize in creating intuitive interfaces using HTML & CSS while also leveraging my strong background in C and Python programming.
-          </p>
-          <br>
-          <p>
-            My goal is to deliver scalable, high-performance solutions that align with both user needs and business objectives. With a strong focus on performance, accessibility, and clean code architecture, I strive to create applications that are not only functional but also impactful.
-          </p>
-
-        </div>
-      </div>
-    </section>
-    <!-- SKILLS -->
-    <section id="skills" class="section grey reveal">
-      <div class="container">
-        <h2 class="section-title">Skills</h2>
-        <div class="section-line"></div>
-
-        <div class="skills-grid">
-          <div class="skill-card">
-            <h3>Programming</h3>
-            <p>C, Python</p>
-          </div>
-
-          <div class="skill-card">
-            <h3>Web Technologies</h3>
-            <p>HTML, CSS</p>
-          </div>
-
-          <div class="skill-card">
-            <h3>Tools</h3>
-            <p>VS Code, Canva</p>
-          </div>
-
-          <div class="skill-card">
-            <h3>Coding Profiles</h3>
-            <p>SkillRack – 1230 Problems</p>
-            <p>LeetCode – 59 Problems</p>
-          </div>
-
-          <div class="skill-card">
-            <h3>Certifications</h3>
-            <p>HTML & CSS (GUVI)</p>
-            <p>C, Java (SoloLearn)</p>
-            <p>C, C++ (IIT Bombay)</p>
-            <p>SQL (HackerRank)</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section reveal">
-      <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <div class="section-line"></div>
-
-        <div class="projects-grid">
-
-          <div class="project-card">
-            <h3>Driver Management System</h3>
-            <p>C project with file handling for driver records.</p>
-            <span class="tag-small">C • File Handling</span>
-          </div>
-
-          <div class="project-card">
-            <h3>Currency Converter</h3>
-            <p>Python web app that converts currencies in real-time.</p>
-            <span class="tag-small">Python • Web</span>
-          </div>
-
-          <div class="project-card">
-            <h3>Electric Power Prediction</h3>
-            <p>ML model using PCA + multiple algorithms.</p>
-            <span class="tag-small">Python • ML</span>
-          </div>
-
-          <div class="project-card">
-            <h3>Online Food Ordering System</h3>
-            <p>Backend system for managing food orders and delivery.</p>
-            <span class="tag-small">Java • Spring Boot</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section grey reveal">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <div class="section-line"></div>
-
-        <div class="contact-content">
-          <p><i class="fas fa-envelope"></i> <a href="mailto:poovendrakumart2006@gmail.com">poovendrakumart2006@gmail.com</a></p>
-          <p><i class="fas fa-phone"></i> 8667473682</p>
-
-          <div class="social-links">
-            <a href="https://github.com/PK28102006" target="_blank" class="social-icon">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="http://www.linkedin.com/in/poovendrakumar-t-cse-499631366"
-              target="_blank" class="social-icon">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <script>
-(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="1OXzY9n2C-29KjWnkq1Xe";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-</script>
-    <script src="script.js"></script>
-  </body>
 </html>
