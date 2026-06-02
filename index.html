@@ -256,6 +256,12 @@
             <li><i class="fas fa-circle-notch" style="color: var(--secondary-color);"></i> Backend service implementation</li>
             <li><i class="fas fa-circle-notch" style="color: var(--secondary-color);"></i> Secure authentication system</li>
           </ul>
+
+          <div class="experience-actions" style="margin-top: 2rem;">
+            <button id="view-cert-btn" class="btn outline certificate-btn">
+              <i class="fas fa-award"></i> View Certificate
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -312,25 +318,35 @@
 
           <div class="certs-mini-list" style="margin-top: 0;">
             <div class="certs-grid">
-              <div class="cert-item">
+              <div class="cert-item cert-item-clickable" id="guvi-cert-btn">
                 <i class="fas fa-certificate"></i>
                 <span>HTML & CSS (GUVI)</span>
+                <i class="fas fa-external-link-alt cert-link-icon" style="margin-left: auto; font-size: 0.8rem; opacity: 0.5; transition: var(--transition-fast);"></i>
               </div>
-              <div class="cert-item">
+              <div class="cert-item cert-item-clickable" id="sololearn-cert-btn">
                 <i class="fas fa-certificate"></i>
                 <span>C & Java (SoloLearn)</span>
+                <i class="fas fa-external-link-alt cert-link-icon" style="margin-left: auto; font-size: 0.8rem; opacity: 0.5; transition: var(--transition-fast);"></i>
               </div>
-              <div class="cert-item">
+              <div class="cert-item cert-item-clickable" id="iit-cert-btn">
                 <i class="fas fa-certificate"></i>
                 <span>C, C++ (IIT Bombay)</span>
+                <i class="fas fa-external-link-alt cert-link-icon" style="margin-left: auto; font-size: 0.8rem; opacity: 0.5; transition: var(--transition-fast);"></i>
               </div>
-              <div class="cert-item">
+              <div class="cert-item cert-item-clickable" id="sql-cert-btn">
                 <i class="fas fa-certificate"></i>
                 <span>SQL (HackerRank)</span>
+                <i class="fas fa-external-link-alt cert-link-icon" style="margin-left: auto; font-size: 0.8rem; opacity: 0.5; transition: var(--transition-fast);"></i>
               </div>
-              <div class="cert-item">
+              <div class="cert-item cert-item-clickable" id="nptel-cert-btn">
                 <i class="fas fa-certificate"></i>
                 <span>Design Thinking (NPTEL)</span>
+                <i class="fas fa-external-link-alt cert-link-icon" style="margin-left: auto; font-size: 0.8rem; opacity: 0.5; transition: var(--transition-fast);"></i>
+              </div>
+              <div class="cert-item cert-item-clickable" id="udemy-cert-btn">
+                <i class="fas fa-certificate"></i>
+                <span>Data Structures (Udemy)</span>
+                <i class="fas fa-external-link-alt cert-link-icon" style="margin-left: auto; font-size: 0.8rem; opacity: 0.5; transition: var(--transition-fast);"></i>
               </div>
             </div>
           </div>
@@ -543,6 +559,17 @@
       else { window.addEventListener("load", onLoad) }
     })();
   </script>
+  <div class="cert-modal-overlay" id="cert-modal">
+    <div class="cert-modal-container">
+      <button class="cert-modal-close" id="cert-modal-close" aria-label="Close modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="cert-modal-content" id="cert-modal-content">
+        <!-- Content dynamically injected by JS -->
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 

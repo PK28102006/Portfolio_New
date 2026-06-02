@@ -246,4 +246,162 @@ document.addEventListener('DOMContentLoaded', () => {
     // 10. HIGH-PERFORMANCE INTERACTIVE NODE NETWORK CANVAS (REMOVED FOR CLEAN STATIC DESIGN)
     // ==========================================================================
 
+    // ==========================================================================
+    // ==========================================================================
+    // 11. DYNAMIC CERTIFICATE LIGHTBOX MODAL (INTERNSHIP, NPTEL, SQL, IIT, SOLOLEARN, UDEMY, & GUVI)
+    // ==========================================================================
+    const viewCertBtn = document.getElementById('view-cert-btn');
+    const nptelCertBtn = document.getElementById('nptel-cert-btn');
+    const sqlCertBtn = document.getElementById('sql-cert-btn');
+    const iitCertBtn = document.getElementById('iit-cert-btn');
+    const sololearnCertBtn = document.getElementById('sololearn-cert-btn');
+    const udemyCertBtn = document.getElementById('udemy-cert-btn');
+    const guviCertBtn = document.getElementById('guvi-cert-btn');
+    const certModal = document.getElementById('cert-modal');
+    const certModalClose = document.getElementById('cert-modal-close');
+    const certModalContent = document.getElementById('cert-modal-content');
+
+    if (certModal && certModalContent) {
+        const closeModal = () => {
+            certModal.classList.remove('active');
+            document.body.style.overflow = ''; // Unlock background scrolling
+            certModalContent.innerHTML = ''; // Clear container
+        };
+
+        const openCertificate = (type, source, altText, labels = []) => {
+            // Check if mobile for PDF viewing
+            if (type === 'pdf' && window.innerWidth <= 768) {
+                window.open(source, '_blank');
+                return;
+            }
+
+            // Clear container
+            certModalContent.innerHTML = '';
+
+            if (type === 'image') {
+                const img = document.createElement('img');
+                img.src = source;
+                img.alt = altText;
+                img.className = 'cert-modal-image';
+                certModalContent.appendChild(img);
+            } else if (type === 'pdf') {
+                const iframe = document.createElement('iframe');
+                iframe.src = source;
+                iframe.className = 'cert-modal-pdf';
+                certModalContent.appendChild(iframe);
+            } else if (type === 'multi') {
+                const sliderContainer = document.createElement('div');
+                sliderContainer.className = 'cert-slider-container';
+
+                const img = document.createElement('img');
+                img.src = source[0];
+                img.alt = altText[0];
+                img.className = 'cert-slider-image';
+                sliderContainer.appendChild(img);
+
+                const controls = document.createElement('div');
+                controls.className = 'cert-slider-controls';
+
+                source.forEach((src, idx) => {
+                    const btn = document.createElement('button');
+                    btn.className = `cert-slider-btn ${idx === 0 ? 'active' : ''}`;
+                    btn.textContent = labels[idx] || `Page ${idx + 1}`;
+                    btn.addEventListener('click', () => {
+                        // Smooth fade transition
+                        img.style.opacity = '0';
+                        setTimeout(() => {
+                            img.src = src;
+                            img.alt = altText[idx] || 'Certificate';
+                            img.style.opacity = '1';
+                        }, 200);
+
+                        // Update active state
+                        controls.querySelectorAll('.cert-slider-btn').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
+                    });
+                    controls.appendChild(btn);
+                });
+
+                sliderContainer.appendChild(controls);
+                certModalContent.appendChild(sliderContainer);
+            }
+
+            certModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Lock background scrolling
+        };
+
+        if (viewCertBtn) {
+            viewCertBtn.addEventListener('click', () => {
+                openCertificate('image', 'Internship_certificate.jpeg', 'Full Stack MERN Internship Certificate');
+            });
+        }
+
+        if (nptelCertBtn) {
+            nptelCertBtn.addEventListener('click', () => {
+                openCertificate('image', 'NPTEL_Certificate.png', 'Design Thinking NPTEL Certificate');
+            });
+        }
+
+        if (sqlCertBtn) {
+            sqlCertBtn.addEventListener('click', () => {
+                openCertificate('multi', 
+                    ['SQL_Basic_Certificate.png', 'SQL_Intermediate_Certificate.png'], 
+                    ['SQL Basic HackerRank Certificate', 'SQL Intermediate HackerRank Certificate'],
+                    ['Basic', 'Intermediate']
+                );
+            });
+        }
+
+        if (iitCertBtn) {
+            iitCertBtn.addEventListener('click', () => {
+                openCertificate('multi', 
+                    ['IIT__Bombay_C.png', 'IIT_Bombay_Cpp.png'], 
+                    ['IIT Bombay C Certificate', 'IIT Bombay C++ Certificate'],
+                    ['C', 'C++']
+                );
+            });
+        }
+
+        if (sololearnCertBtn) {
+            sololearnCertBtn.addEventListener('click', () => {
+                openCertificate('multi', 
+                    ['Solo_learn_C.jpg', 'Solo_learn_java.jpg'], 
+                    ['SoloLearn C Certificate', 'SoloLearn Java Certificate'],
+                    ['C', 'Java']
+                );
+            });
+        }
+
+        if (udemyCertBtn) {
+            udemyCertBtn.addEventListener('click', () => {
+                openCertificate('image', 'Data_Structures_udemy.jpg', 'Data Structures Udemy Certificate');
+            });
+        }
+
+        if (guviCertBtn) {
+            guviCertBtn.addEventListener('click', () => {
+                openCertificate('image', 'HTML_CSS_GUVI.jpg', 'HTML & CSS GUVI Certificate');
+            });
+        }
+
+        if (certModalClose) {
+            certModalClose.addEventListener('click', closeModal);
+        }
+
+        // Close on overlay backdrop click
+        certModal.addEventListener('click', (e) => {
+            if (e.target === certModal) {
+                closeModal();
+            }
+        });
+
+        // Close on Escape keyboard key press
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && certModal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
+
 });
+

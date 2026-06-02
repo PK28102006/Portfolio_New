@@ -2148,3 +2148,208 @@ textarea.glass-input {
     font-size: 1.25rem;
   }
 }
+
+/* ==========================================================================
+   INTERNSHIP CERTIFICATE & LIGHTBOX MODAL STYLES
+   ========================================================================== */
+
+/* Certificate button */
+.certificate-btn {
+  border-color: rgba(var(--primary-rgb), 0.35);
+  font-size: 0.95rem;
+  padding: 10px 24px;
+}
+
+.certificate-btn i {
+  color: var(--primary-color);
+  margin-right: 8px;
+  filter: drop-shadow(0 0 5px rgba(var(--primary-rgb), 0.5));
+}
+
+.certificate-btn:hover {
+  background: rgba(var(--primary-rgb), 0.1);
+  box-shadow: 0 0 15px rgba(var(--primary-rgb), 0.25);
+  border-color: var(--primary-color);
+}
+
+/* Glassmorphic Lightbox Modal overlay */
+.cert-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(4, 5, 8, 0.7);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              visibility 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cert-modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cert-modal-container {
+  position: relative;
+  max-width: 90%;
+  max-height: 85%;
+  background: rgba(10, 11, 14, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8),
+              0 0 40px rgba(var(--primary-rgb), 0.05);
+  transform: scale(0.9);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cert-modal-overlay.active .cert-modal-container {
+  transform: scale(1);
+}
+
+.cert-modal-image {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+}
+
+.cert-modal-close {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background: var(--accent-gradient);
+  border: none;
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  transition: var(--transition-fast);
+  z-index: 10;
+}
+
+.cert-modal-close:hover {
+  transform: scale(1.1) rotate(90deg);
+  box-shadow: 0 8px 20px rgba(var(--primary-rgb), 0.4);
+}
+
+@media (max-width: 768px) {
+  .cert-modal-close {
+    top: 15px;
+    right: 15px;
+  }
+  .cert-modal-container {
+    max-width: 95%;
+    padding: 6px;
+  }
+}
+
+/* Clickable certificate items */
+.cert-item-clickable {
+  cursor: pointer;
+  border-color: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.02);
+  transition: var(--transition-smooth);
+}
+
+.cert-item-clickable:hover {
+  background: rgba(var(--primary-rgb), 0.05);
+  border-color: rgba(var(--primary-rgb), 0.3);
+  box-shadow: 0 4px 15px rgba(var(--primary-rgb), 0.1);
+  transform: translateY(-2px);
+  color: var(--text-main);
+}
+
+.cert-item-clickable:hover .cert-link-icon {
+  opacity: 1 !important;
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+/* PDF Modal adjustments */
+.cert-modal-pdf {
+  width: 100%;
+  height: 75vh;
+  border: none;
+  border-radius: 8px;
+  background: #111215;
+}
+
+@media (max-width: 768px) {
+  .cert-modal-pdf {
+    height: 60vh;
+  }
+}
+
+/* Dynamic Slider & Change-View Styles */
+.cert-slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.cert-slider-image {
+  max-width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.cert-slider-controls {
+  display: flex;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0.35rem;
+  border-radius: 30px;
+}
+
+.cert-slider-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-light);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  outline: none;
+}
+
+.cert-slider-btn:hover {
+  color: var(--text-main);
+}
+
+.cert-slider-btn.active {
+  background: var(--accent-gradient);
+  color: white;
+  box-shadow: 0 4px 12px var(--glow-color);
+}
+
+
+
+
