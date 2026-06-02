@@ -21,7 +21,7 @@
   --text-muted: #64748b;
 
   /* Glassmorphic values */
-  --glass-bg: rgba(8, 9, 12, 0.85); /* Significantly darker and more opaque for premium text contrast */
+  --glass-bg: rgba(10, 11, 14, 0.88); /* Opaque dark glass backplate to ensure overlay text is perfectly legible */
   --glass-border: rgba(255, 255, 255, 0.06);
   --glass-border-hover: rgba(255, 255, 255, 0.15);
 
@@ -107,14 +107,14 @@ body {
   width: 480px;
   left: -150px;
   top: -200px;
-  background: linear-gradient(135deg, #0f1013 0%, #050608 100%);
+  background: linear-gradient(135deg, #2d2f34 0%, #121316 100%);
 }
 
 .stripe-2 {
   width: 320px;
   left: 380px;
   top: -300px;
-  background: linear-gradient(135deg, #0c0d10 0%, #030405 100%);
+  background: linear-gradient(135deg, #24252a 0%, #0e0f11 100%);
   box-shadow: 20px 0 60px rgba(0, 0, 0, 0.98);
 }
 
@@ -122,7 +122,7 @@ body {
   width: 550px;
   right: -250px;
   top: -150px;
-  background: linear-gradient(135deg, #121316 0%, #060709 100%);
+  background: linear-gradient(135deg, #3a3d46 0%, #151619 100%);
   box-shadow: 25px 0 70px rgba(0, 0, 0, 0.99);
 }
 
