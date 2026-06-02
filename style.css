@@ -15,15 +15,15 @@
   --glow-color: rgba(255, 109, 0, 0.25);
 
   /* Neutral colors */
-  --bg-body: #0b0c10; /* Deep Charcoal dark, matches Figma backdrop */
+  --bg-body: #050608; /* Deep rich dark background */
   --text-main: #f8fafc; /* Crisp silver white */
   --text-light: #94a3b8; /* Slate grey */
   --text-muted: #64748b;
 
   /* Glassmorphic values */
-  --glass-bg: rgba(17, 18, 23, 0.45);
-  --glass-border: rgba(255, 255, 255, 0.05);
-  --glass-border-hover: rgba(255, 255, 255, 0.12);
+  --glass-bg: rgba(8, 9, 12, 0.85); /* Significantly darker and more opaque for premium text contrast */
+  --glass-border: rgba(255, 255, 255, 0.06);
+  --glass-border-hover: rgba(255, 255, 255, 0.15);
 
   /* Shadows & Transitions */
   --shadow-sm:
@@ -79,7 +79,7 @@ body {
    LAYERED STRUCTURAL GEOMETRIC BACKGROUND (FIGMA MATCH)
    ========================================================================== */
 body {
-  background: #17181c;
+  background: var(--bg-body);
   overflow-x: hidden;
 }
 
@@ -92,14 +92,14 @@ body {
   z-index: -5;
   pointer-events: none;
   overflow: hidden;
-  background: #111215;
+  background: #050608;
 }
 
 .bg-stripe {
   position: absolute;
   transform: rotate(-32deg);
   transform-origin: top left;
-  box-shadow: 15px 0 50px rgba(0, 0, 0, 0.85);
+  box-shadow: 15px 0 50px rgba(0, 0, 0, 0.95);
   height: 300%;
 }
 
@@ -107,23 +107,23 @@ body {
   width: 480px;
   left: -150px;
   top: -200px;
-  background: linear-gradient(135deg, #222327 0%, #121316 100%);
+  background: linear-gradient(135deg, #0f1013 0%, #050608 100%);
 }
 
 .stripe-2 {
   width: 320px;
   left: 380px;
   top: -300px;
-  background: linear-gradient(135deg, #1b1c1f 0%, #0e0f11 100%);
-  box-shadow: 20px 0 60px rgba(0, 0, 0, 0.95);
+  background: linear-gradient(135deg, #0c0d10 0%, #030405 100%);
+  box-shadow: 20px 0 60px rgba(0, 0, 0, 0.98);
 }
 
 .stripe-3 {
   width: 550px;
   right: -250px;
   top: -150px;
-  background: linear-gradient(135deg, #2a2b30 0%, #151619 100%);
-  box-shadow: 25px 0 70px rgba(0, 0, 0, 0.98);
+  background: linear-gradient(135deg, #121316 0%, #060709 100%);
+  box-shadow: 25px 0 70px rgba(0, 0, 0, 0.99);
 }
 
 /* ==========================================================================
