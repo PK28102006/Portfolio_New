@@ -775,7 +775,7 @@ a {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
     .hero-stats-card {
         flex-direction: column;
         padding: 1rem;
@@ -790,7 +790,7 @@ a {
   margin: 0 1.25rem;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
     .stat-divider {
         width: 100%;
         height: 1px;
@@ -818,9 +818,22 @@ a {
         height: 280px;
     }
 }
+
+.avatar-circle-backdrop {
+  position: absolute;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
   z-index: 1;
   box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.8);
   pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .avatar-circle-backdrop {
+    width: 240px;
+    height: 240px;
+  }
 }
 
 .avatar-circle-backdrop::before {
@@ -1019,7 +1032,6 @@ a {
         gap: 2rem;
     }
 }
-}
 
 .skills-card-compact {
   display: flex;
@@ -1036,6 +1048,11 @@ a {
         gap: 1rem;
     }
 }
+
+.skill-icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
   border: 1px solid rgba(var(--primary-rgb), 0.2);
   display: flex;
   align-items: center;
@@ -1217,6 +1234,9 @@ a {
         margin-bottom: 2rem;
     }
 }
+
+.filter-tabs {
+  display: flex;
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
   padding: 0.35rem;
@@ -1266,6 +1286,8 @@ a {
         gap: 1.25rem;
     }
 }
+
+.project-card {
   height: 100%;
 }
 
@@ -1274,6 +1296,11 @@ a {
         padding: 1.5rem;
     }
 }
+
+.project-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1363,7 +1390,6 @@ a {
     .contact-layout {
         gap: 2rem;
     }
-}
 }
 
 .contact-info-block h3 {
@@ -1902,6 +1928,69 @@ textarea.glass-input {
   color: var(--text-light);
 }
 
+/* Responsive Education Cards and Grade Pills */
+@media (max-width: 768px) {
+  .education-link-card {
+    padding: 1.5rem;
+  }
+  .education-card-content {
+    gap: 1.25rem;
+  }
+  .school-icon-glow {
+    width: 52px;
+    height: 52px;
+    font-size: 1.5rem;
+    border-radius: 12px;
+  }
+  .school-info-details h4 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .education-link-card {
+    padding: 1.25rem;
+  }
+  .education-card-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .school-icon-glow {
+    width: 48px;
+    height: 48px;
+    font-size: 1.3rem;
+  }
+  .school-info-details h4 {
+    font-size: 1.15rem;
+  }
+  .school-sub {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  .grades-grid {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+  .grade-pill {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .grade-label {
+    flex: 1;
+    text-align: left;
+    padding: 0.45rem 0.85rem;
+    font-size: 0.8rem;
+  }
+  .grade-value {
+    flex: 1;
+    text-align: right;
+    padding: 0.45rem 0.85rem;
+    font-size: 0.85rem;
+  }
+}
+
 /* ==========================================================================
    SCROLL REVEAL & GLOBAL KEYFRAMES
    ========================================================================== */
@@ -1976,6 +2065,9 @@ textarea.glass-input {
 }
 
 @media (max-width: 768px) {
+  .hero-name {
+    font-size: 2.25rem;
+  }
   .section {
     padding: 50px 0 60px;
   }
@@ -2030,6 +2122,9 @@ textarea.glass-input {
 }
 
 @media (max-width: 480px) {
+  .hero-name {
+    font-size: 1.75rem;
+  }
   .hero-text h1 {
     font-size: 2.25rem;
   }
@@ -2042,5 +2137,14 @@ textarea.glass-input {
   }
   .mobile-drawer {
     width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-hire-btn {
+    display: none;
+  }
+  .drawer-header .logo {
+    font-size: 1.25rem;
   }
 }
